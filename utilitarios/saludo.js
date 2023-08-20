@@ -12,6 +12,14 @@ saludar = function()
     let mensajeBienvenida = "Bienvenido "+nombre+" "+apellido;
 
     mostrarTexto("lblResultado", mensajeBienvenida);
+    mostrarImagen("imgSaludo", "./imagenes/saludoKyojuro.gif")
+}
+
+mostrarImagen = function(idcomponente,rutaImagen)
+{
+    let componente;
+    componente = document.getElementById(idcomponente);
+    componente.src = rutaImagen;
 }
 
 recuperarTexto = function(idcomponente)
