@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./promedioNotas.js"></script>
+        <script src="./serviciosPromedioNotas.js"></script>
+        <script src="./utilitarios.js"></script>
+        <title>Servicio - Notas</title>
+    </head>
+    <body>
+        <div>
+            <h1>SISTEMA DE NOTAS</h1>
+        </div>
+        <div>
+            <h3>Ingrese nota 1</h3>
+            <input type="text" id="textNota1"/>
+            <h3>Ingrese nota 2</h3>
+            <input type="text" id="textNota2"/>
+            <h3>Ingrese nota 3</h3>
+            <input type="text" id="textNota3"/>
+            <h3 id="lblPromedio"></h3>
+            <img src="" id="imgEstado" alt="" width="200px"/>
+        </div>
+        <div>
+            <input type="button" value="CALCULAR" onclick="calcularPromedioNotas();"/>
+        </div>
+    </body>
+</html>
