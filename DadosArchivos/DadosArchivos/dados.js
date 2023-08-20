@@ -8,7 +8,7 @@ jugar = function()
     }
     else
     {
-        cambiarTexto("lblMensaje", "ES MENOR A 3 GANASTE PERDISTE ESTAS DE MALAS");
+        cambiarTexto("lblMensaje", "ES MENOR A 3 PERDISTE ESTAS DE MALAS");
     }
 }
 
