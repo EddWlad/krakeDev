@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="placas.js"></script>
+        <script src="serviciosPlacas.js"></script>
+        <script src="utilitariosCadenas.js"></script>
+        <link rel="stylesheet" href="placas.css">
+        <title>Validacion - Placas</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logoEscuela">
+                <img src="./img/logoKrakeDev.png" width="80%" />
+            </div>
+            
+            <div calss="ingreso__placas">
+                <h1 class="titulo">SISTEMA DE VALIDACION DE PLACAS</h1>
+                <div class="solicitud">
+                    <h3 class="subtitulo">INGRESE LA PLACA</h3>
+                    <input type="text" id="txtPlaca" class="placa"/>
+                </div>
+                <div class="container__boton">
+                    <input type="button" class="boton" value="VALIDAR" onclick="validarPlaca();">
+                </div>
+            </div>
+
+            <div class="validaciones">
+                <div class="correcto">
+                    <label class="valida" id="lblValida"></label>
+                </div>
+                <div class="correcto">
+                    <label class="incorrecta" id="lblIncorrecta"></label>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

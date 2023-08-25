@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,600&display=swap');
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: green;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.container
+{
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.8);
+    margin-left: 0px;
+    margin-right:0px;
+    flex-direction: row;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.logoEscuela
+{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.solicitud
+{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.placa
+{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.validaciones
+{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.correcto
+{
+    display: flex;
+      flex:1;
+      flex-direction: row;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 65px;
+}
+
+.valida
+{
+    color: green;
+    font-size: 25px;
+    text-align: center;
+    padding-right: 15px;
+}
+
+.container__boton
+{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+
+.boton
+{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 60px 10px 55px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 30px
+}
+
+.boton:hover
+{
+    background-color:white; 
+    color: #4CAF50;
+    border:1px;
+    border-color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:active
+{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.incorrecta
+{
+    color:red;
+    font-style: italic;
+    font-size: 10px;
+    text-align: center;
+    margin-top: -120px;
+    margin-right: 25px;
+    margin-left: -26px;
+}
