@@ -321,3 +321,55 @@ obtenerTipoVehiculo = function(placa)
     return tipoVehiculo;
 
 }
+
+obtenerDiaPicoYPlaca = function(placa)
+{
+    let ultimoCaracter = placa.length - 1;
+    let caracter = placa.charAt(ultimoCaracter);
+    let picoYPlaca ="";
+    switch(caracter)
+    {
+        case "1":
+            picoYPlaca="PICO Y PLACA LOS LUNES";
+            break;
+
+        case "2":
+            picoYPlaca="PICO Y PLACA LOS LUNES";
+            break;
+
+        case "3":
+            picoYPlaca="PICO Y PLACA LOS MARTES";
+            break;
+            
+        case "4":
+            picoYPlaca="PICO Y PLACA LOS MARTES";
+            break;
+
+        case "5":
+            picoYPlaca="PICO Y PLACA LOS MIERCOLES";
+            break;
+
+        case "6":
+            picoYPlaca="PICO Y PLACA LOS MIERCOLES";
+            break;
+
+        case "7":
+            picoYPlaca="PICO Y PLACA LOS JUEVES";
+            break;
+
+        case "8":
+            picoYPlaca="PICO Y PLACA LOS JUEVES";
+            break;
+
+        case "9":
+            picoYPlaca="PICO Y PLACA LOS VIERNES";
+            break;
+
+        default:
+            picoYPlaca="PICO Y PLACA LOS VIERNES";
+            break;
+    }
+    return picoYPlaca;
+
+
+}
