@@ -175,3 +175,149 @@ validarEstructura = function(placa)
     
 
 }
+
+obtenerProvincia = function(placa)
+{
+    let letraP = placa.charAt(0);
+    let provincia = "";
+
+    switch(letraP)
+    {
+        case "A":
+            provincia="AZUAY";
+            break;
+
+        case "B":
+            provincia="BOLIVAR";
+            break;
+
+        case "U":
+            provincia="CAÑAR";
+            break;
+
+        case "C":
+            provincia="CARCHI";
+            break;
+    
+        case "X":
+            provincia="COTOPAXI";
+            break;
+
+        case "H":
+            provincia="CHIMBORAZO";
+            break;
+
+        case "O":
+            provincia="EL ORO";
+            break;
+
+        case "E":
+            provincia="ESMERALDAS";
+            break;
+
+        case "W":
+            provincia="GALAPAGOS";
+            break;
+
+        case "G":
+            provincia="GUAYAS";
+            break;
+
+        case "I":
+            provincia="IMBABURA";
+            break;
+
+        case "L":
+            provincia="LOJA";
+            break;
+
+        case "R":
+            provincia="LOS RIOS";
+            break;
+
+        case "M":
+            provincia="MANABI";
+            break;
+
+        case "V":
+            provincia="MORONA SANTIAGO";
+            break;
+            
+        case "N":
+            provincia="NAPO";
+            break;
+
+        case "S":
+            provincia="PASTAZA";
+            break;
+            
+        case "P":
+            provincia="PICHINCHA";
+            break;
+
+        case "K":
+            provincia="SUCUMBIOS";
+            break;
+
+        case "Q":
+            provincia="ORELLANA";
+            break;
+
+        case "T":
+            provincia="TUNGURAHUA";
+            break;
+            
+        case "Z":
+            provincia="ZAMORA CHINCHIPE";
+            break;            
+
+        case "Y":
+            provincia="SANTA ELENA";
+            break;
+
+        default:
+            provincia = "PROVINCIA INCORRECTA";
+    }
+
+    return provincia;
+            
+}
+
+obtenerTipoVehiculo = function(placa)
+{
+    let letraP = placa.charAt(1);
+    let tipoVehiculo = "";
+
+    switch(letraP)
+    {
+        case "A":
+            tipoVehiculo="VEHICULO COMERCIAL";
+            break;
+
+        case "Z":
+            tipoVehiculo="VEHICULO COMERCIAL";
+            break;
+
+        case "E":
+            tipoVehiculo="VEHICULO GUBERNAMENTAL";
+            break;
+
+        case "X":
+            tipoVehiculo="VEHICULO DE USO OFICIAL";
+            break;
+    
+        case "S":
+            tipoVehiculo="VEHICULO DEL GOBIERNO MUNICIPAL";
+            break;
+
+        case "M":
+            tipoVehiculo="VEHICULO MUNICIPAL";
+            break;
+
+        default:
+            tipoVehiculo = "VEHICULO PARTICULAR";
+    }
+    
+    return tipoVehiculo;
+
+}

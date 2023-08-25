@@ -94,6 +94,7 @@ body
     display: flex;
     flex:1;
     justify-content: center;
+    margin-left: 70px;
 }
 
 .boton
@@ -105,7 +106,8 @@ body
     text-align: center;
     font-size: 16px;
     border-radius: 5px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    
 }
 
 .boton:hover
@@ -135,7 +137,29 @@ body
     font-style: italic;
     font-size: 10px;
     text-align: center;
-    margin-top: -120px;
+    margin-top: -170px;
     margin-right: 25px;
     margin-left: -26px;
+}
+
+.verificacion_provincia
+{
+    color: blueviolet;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    margin-top: -50px;
+    margin-right: 23px;
+    margin-left: 12px;
+}
+
+.tipo
+{
+    color: orangered;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    margin-top: -70px;
+    margin-right: 23px;
+    margin-left: 12px;
 }
