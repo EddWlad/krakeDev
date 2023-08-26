@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="serviciosJuego.js"></script>
+    <script src="utilitarios.js"></script>
+    <script src="juego.js"></script>
+    <link rel="stylesheet" href="juego.css">
+    <title>JUEGA - PIEDRA PAPEL O TIJERA</title>
+</head>
+<body>
+    <div class="container"> 
+        <div class="container__titulo">
+            <h1 class="titulo">BIENVENIDO JUEGA PIEDRA PAPEL O TIJERA</h1>
+        </div>
+        <div class="container__juego">
+            <div class="container__img">
+                <h3 class="subtitulo">
+                    SELECCIONA CON SABIDURIA
+                </h3>
+                <div class="imgPiedra">
+                    <img src="./img/piedra.png" class="imagenes" id="imgPiedra" onclick="jugar('PIEDRA');" alt="" width="150"/>
+                </div>
+                <div class="img">
+                    <img src="./img/papel.png" class="imagenes"  id="imgPapel" onclick="jugar('PAPEL');" alt="" width="150"/>
+                </div>
+                <div class="img">
+                    <img src="./img/tijera.png" class="imagenes"  id="imgTijera" onclick="jugar('TIJERA');" alt="" width="150"/>
+                </div>
+            </div>
+            <div class="container__determinacion">
+                <h4 class="resultado__determinar" id="lblResultado"></h4>
+                <h4 class="resultado">MIS PUNTOS:</h4>
+                <h4 class="resultado" id="lblMisPuntos">0</h4>
+                <h4 class="resultado1">PUNTOS ADVERSARIO:</h4>
+                <h4 class="resultado1" id="lblPuntosAdversario">0</h4>
+                <input type="button" class="boton" value="NUEVA PARTIDA" onclick="limpiar();">
+            </div>
+            <div class="container__imgComputador">
+                <div class="img">
+                    <h3 class="subtitulo__resultado">ELECCION DE TU OPONENTE</h3>
+                    <img id="imgEleccionComputador"  width="430" height="400">
+                </div>  
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
