@@ -65,3 +65,17 @@ mostrarLetra = function(letra,posicion)
             break;
     }
 }
+
+validar = function(letra)
+{
+    let letrasEncontradas;
+    for(i=0; i<palabraSecreta.length; i++)
+    {
+        let caracter = palabra.charAt(i);
+        if (caracter == letra)
+        {
+            mostrarLetra(caracter,i);
+            letrasEncontradas += 1;
+        }
+    }
+}
