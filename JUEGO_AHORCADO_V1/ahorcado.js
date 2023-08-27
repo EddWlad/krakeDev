@@ -43,3 +43,25 @@ guardarPalabra = function()
     }
 
 }
+
+mostrarLetra = function(letra,posicion)
+{
+    switch(posicion)
+    {
+        case "0":
+            mostrarTexto("div0",letra);
+            break;
+        case "1":
+            mostrarTexto("div1",letra);
+            break;
+        case "2":
+            mostrarTexto("div2",letra);
+            break;
+        case "3":
+            mostrarTexto("div3",letra);
+            break;
+        case "4":
+            mostrarTexto("div4",letra);
+            break;
+    }
+}
