@@ -11,14 +11,14 @@ antes de crar una varible estado podias a ver realizado un return ya se false o 
 esMayuscula = function(caracter)
 {
     let letra = caracter.charCodeAt(0);
-    let estado;
+ 
     if(letra>=65 && letra<=90)
     {
-        estado = true;
+        return true;
     }
     else
     {
-        estado =  false;
+        return  false;
     }
     return estado;
 }
@@ -157,7 +157,7 @@ mostrarGanador = function(coincidencias)
     switch(coincidencias)
     {
         case 5:
-            mostrarImagen("resultado", "ganador.gif");
+            mostrarImagen("ahorcadoImagen", "ganador.gif");
             break;
         default:
     }
@@ -168,7 +168,7 @@ mostrarPerdedor = function(intentos)
     switch(intentos)
     {
         case 10:
-            mostrarImagen("resultado", "gameOver.gif");
+            mostrarImagen("ahorcadoImagen", "gameOver.gif");
             break;
         default:
     }
