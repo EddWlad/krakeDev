@@ -4,7 +4,9 @@ let palabraSecreta ="";
 let intentos = 0;
 let coincidencias =0;
 let errores = 0;
-
+/*
+antes de crar una varible estado podias a ver realizado un return ya se false o true como correspondia
+*/
 esMayuscula = function(caracter)
 {
     let letra = caracter.charCodeAt(0);
@@ -144,7 +146,10 @@ mostrarAhorcado = function(errores)
             mostrarPerdedor(intentos);
     }
 }
-
+/*
+La imagen debe mostarse en la id de "ahorcadoImagen"
+no en el resultado ya que esa imagen corresponde al fondo
+*/
 mostrarGanador = function(coincidencias)
 {
     switch(coincidencias)
