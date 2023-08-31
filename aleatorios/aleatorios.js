@@ -18,14 +18,18 @@ generarAleatorios = function()
         {
             numerosAleatorios = randomico();
             aleatorios[i]=numerosAleatorios;
+            console.log(i); 
         }
             mostrarResultados(aleatorios);
+             
     }
+    
     else
     {
         alert("SOLO SE PERMITE UN ARREGLO CON MINIMO 5 POSICIONES Y MAXIMO 20");
     }
-    //console.log(aleatorios);   
+    
+     
 }
 
 mostrarResultados = function(arregloNumeros)
