@@ -1,4 +1,5 @@
-numeroAleatorio = function()
+let lengthArreglo;
+randomico = function()
 {
     let valorAleatorio
     let aleatorio = Math.random();
@@ -9,11 +10,35 @@ numeroAleatorio = function()
 generarAleatorios = function()
 {
     let aleatorios = [];
-    let lengthArreglo;
+    let numerosAleatorios;
     lengthArreglo=recuperarInt("txtLenghtArreglo");
-    for(let i = 0; i<lengthArreglo; i++)
+    if(lengthArreglo>=5 && lengthArreglo<=20)
     {
-        console.log(i)
+        for(let i = 0; i<lengthArreglo; i++)
+        {
+            numerosAleatorios = randomico();
+            aleatorios[i]=numerosAleatorios;
+        }
+            mostrarResultados(aleatorios);
     }
-    
+    else
+    {
+        alert("SOLO SE PERMITE UN ARREGLO CON MINIMO 5 POSICIONES Y MAXIMO 20");
+    }
+    //console.log(aleatorios);   
 }
+
+mostrarResultados = function(arregloNumeros)
+{
+    let cmpTabla =  document.getElementById("divTabla");
+    let contenidoTabla = "<table><tr><th>NUMEROS EN ARREGLO</th></tr>"
+    for(let i=0;i<lengthArreglo;i++)
+    {
+        contenidoTabla+= "<tr><td>";
+        contenidoTabla +=arregloNumeros[i];
+        contenidoTabla+="</td></tr>";
+
+    }
+    contenidoTabla+="</table>";
+    cmpTabla.innerHTML=contenidoTabla;
+} 
