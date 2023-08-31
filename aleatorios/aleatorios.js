@@ -20,10 +20,8 @@ generarAleatorios = function()
             aleatorios[i]=numerosAleatorios;
             console.log(i); 
         }
-            mostrarResultados(aleatorios);
-             
-    }
-    
+            mostrarResultados(aleatorios);          
+    } 
     else
     {
         alert("SOLO SE PERMITE UN ARREGLO CON MINIMO 5 POSICIONES Y MAXIMO 20");
