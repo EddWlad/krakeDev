@@ -78,7 +78,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-tbody tr:nth-child(odd) {
+/*tbody tr:nth-child(odd) {
     background-color: #908efc;
   }
   
@@ -99,7 +99,7 @@ tbody tr:nth-child(odd) {
   }
   .areaTabla{
     margin-top: 20px;
-  }
+  }*/
 .estiloBoton:hover {
     background-color:white; 
     color: #217023;
@@ -186,3 +186,55 @@ tbody tr:nth-child(odd) {
     font-style: italic;
     font-size: 14px;
 }
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f2f2f2; /* Color de fondo */
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el encabezado de la tabla */
+  th {
+    background-color: #3399ff; /* Color de fondo para el encabezado */
+    color: white; /* Color del texto en el encabezado */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+    font-style: italic;
+  }
+  
+  /* Estilo para las celdas de datos */
+  td {
+    padding: 8px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+  }
+  
+  /* Estilo para las filas impares (cambia el fondo) */
+  tr:nth-child(odd) {
+    background-color: #e6e6e6;
+  }
+  
+  /* Estilo para las filas pares (otro fondo) */
+  tr:nth-child(even) {
+    background-color: #dcdcdc;
+  }
+  
+  /* Estilo para las celdas específicas */
+  td:nth-child(1) {
+    background-color: #ffcc00; /* Amarillo */
+  }
+  
+  td:nth-child(2) {
+    background-color: #ff6666; /* Rojo */
+  }
+  
+  td:nth-child(3) {
+    background-color: #66ff66; /* Verde */
+  }
+  
+  td:nth-child(4) {
+    background-color: #3399ff; /* Azul */
+  }
+  
