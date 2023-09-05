@@ -126,7 +126,12 @@ guardar = function()
             if(agregoEmpleado)
             {
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
-                mostrarEmpleados();   
+                mostrarEmpleados();
+                deshabilitarComponente("txtCedula");
+                deshabilitarComponente("txtNombre");
+                deshabilitarComponente("txtApellido");
+                deshabilitarComponente("txtSueldo");
+                deshabilitarComponente("btnGuardar");   
             }
             else
             {
