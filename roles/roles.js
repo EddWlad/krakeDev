@@ -12,11 +12,7 @@ mostrarOpcionEmpleado = function()
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
     mostrarEmpleados();
-    deshabilitarComponente("txtCedula");
-    deshabilitarComponente("txtNombre");
-    deshabilitarComponente("txtApellido");
-    deshabilitarComponente("txtSueldo");
-    deshabilitarComponente("btnGuardar");
+    deshabilitarElementos();
 }
 
 mostrarOpcionRol = function()
@@ -127,11 +123,7 @@ guardar = function()
             {
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                 mostrarEmpleados();
-                deshabilitarComponente("txtCedula");
-                deshabilitarComponente("txtNombre");
-                deshabilitarComponente("txtApellido");
-                deshabilitarComponente("txtSueldo");
-                deshabilitarComponente("btnGuardar");   
+                deshabilitarElementos(); 
             }
             else
             {
@@ -267,5 +259,13 @@ validacionSueldo = function(sueldo)
     return estado;
 }
 
+deshabilitarElementos = function()
+{
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");  
+}
 
         
