@@ -40,7 +40,7 @@ mostrarEmpleados = function()
     "<th>CEDULA</th>"+
     "<th>NOMBRE</th>"+
     "<th>APELLIDO</th>"+
-    "<th>SUELDOO</th>"+
+    "<th>SUELDO</th>"+
     "</tr>";
     let elementoEmpleados;
     for(let i =0; i<empleados.length;i++)
@@ -66,3 +66,201 @@ ejecutarNuevo = function()
     habilitarComponente("txtSueldo");
     habilitarComponente("btnGuardar"); 
 }
+
+buscarEmpleados = function(cedula)
+{
+    let elementoEmpleado;
+    let empleadoEncontrado = null;
+    for(i=0;i<empleados.length;i++)
+    {
+        elementoEmpleado = empleados[i];
+        if (elementoEmpleado.cedula==cedula)
+        {
+            empleadoEncontrado=elementoEmpleado;
+            break;
+        }
+    }
+    return empleadoEncontrado;
+}
+
+
+agregarEmpleado = function(empleado)
+{
+    let resultado;
+    resultado = buscarEmpleados(empleado.cedula)
+    if(resultado == null)
+    {
+        empleados.push(empleado);
+        return true;
+    }
+    else
+    {
+        return false; 
+    }      
+}
+
+guardar = function()
+{
+    let valorCedula=recuperarTexto("txtCedula");
+    let valorNombre=recuperarTexto("txtNombre");
+    let valorApellido=recuperarTexto("txtApellido");
+    let valorSueldo=recuperarFloat("txtSueldo");
+
+    let cedula = validacionCedula(valorCedula);
+    let nombre = validacionNombre(valorNombre);
+    let apellido = validacionApellido(valorApellido);
+    let sueldo = validacionSueldo(valorSueldo);
+
+    let agregoEmpleado;
+
+    if(cedula && nombre && apellido && sueldo)
+    {
+        if(esNuevo)
+        {
+            let empleado = {};
+            empleado.cedula=valorCedula;
+            agregoEmpleado = agregarEmpleado(empleado);
+            empleado.nombre=valorNombre;
+            empleado.apellido=valorApellido;
+            empleado.sueldo=valorSueldo; 
+            if(agregoEmpleado)
+            {
+                alert("EMPLEADO GUARDADO CORRECTAMENTE");
+                mostrarEmpleados();   
+            }
+            else
+            {
+                alert("YA EXISTE UN EMPLEADO CON LA CEDULA: "+empleado.cedula);
+            }
+        }
+    }
+
+
+}
+
+validacionCedula = function(cedula)
+{
+    let mensaje ="";
+    let estado;
+    if(cedula.length==10)
+    {
+        for(let i=0; i<cedula.length;i++)
+        {
+            let caracterCedula = cedula.charAt(i);
+            if(esDigito(caracterCedula))
+            {
+                estado =  true;
+                mostrarTexto("lblErrorCedula","");
+            }
+            else
+            {
+                mensaje = "La cedula debe ser solo digitos"; 
+                mostrarTexto("lblErrorCedula",mensaje);
+                estado = false;
+                break;    
+            }
+        }
+    }
+    else
+    {
+        mensaje = "La cedula debe tener 10 digitos" ;
+        mostrarTexto("lblErrorCedula",mensaje);
+        estado = false;
+    } 
+    return estado;
+}
+
+validacionNombre = function(nombre)
+{
+    let mensaje ="";
+    let estado;
+    if(nombre.length>=3)
+    {
+        for(let i=0; i<nombre.length;i++)
+        {
+            let caracterNombre = nombre.charAt(i);
+            if(esMayuscula(caracterNombre))
+            {
+                estado = true;
+                mostrarTexto("lblErrorNombre","");
+            }
+            else
+            {
+                mensaje = "El nombre solo debe tener letras mayusculas";
+                mostrarTexto("lblErrorNombre",mensaje);
+                estado = false;
+                break;    
+            }
+        }   
+    }
+    else
+    {
+        mensaje = "El nombre debe tener una logitud de almenos 3 caracteres";
+        mostrarTexto("lblErrorNombre",mensaje);
+        estado = false;
+    }
+    return estado;  
+}
+
+validacionApellido = function(apellido)
+{
+    let mensaje ="";
+    let estado;
+    if(apellido.length>=3)
+    {
+        for(let i=0; i<apellido.length;i++)
+        {
+            let caracterApellido= apellido.charAt(i);
+            if(esMayuscula(caracterApellido))
+            {
+                estado = true;
+                mostrarTexto("lblErrorApellido","");
+            }
+            else
+            {
+                mensaje = "El apellido solo debe tener letras mayusculas";
+                mostrarTexto("lblErrorApellido",mensaje);
+                estado = false;
+                break;    
+            }
+        }   
+    }
+    else
+    {
+        mensaje = "El apellido debe tener una logitud de almenos 3 caracteres";
+        mostrarTexto("lblErrorApellido",mensaje);
+        estado = false;
+    }
+    return estado;
+}
+
+validacionSueldo = function(sueldo)
+{
+    let estado;
+    if(!isNaN(sueldo))
+    {
+        if(sueldo>=400 && sueldo<=5000)
+        {
+            
+            estado =true;
+            mostrarTexto("lblErrorSueldo","");
+            
+        }
+        else
+        {
+            mensaje = "El sueldo debe ser entre 400 y 5000 dolares";
+            mostrarTexto("lblErrorSueldo",mensaje);
+            estado = false;
+        }
+    }
+    else
+    {
+        mensaje = "Error de valor de sueldo";
+        mostrarTexto("lblErrorSueldo",mensaje);
+        estado = false;
+    }
+    return estado;
+}
+
+
+        
