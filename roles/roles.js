@@ -501,14 +501,18 @@ mostrarTotales = function()
     let totalEmpleado = 0;
     let totalEmpleador = 0;
     let totalAPagar = 0;
+    let totalNomina = 0;
     for(let i = 0; i<roles.length;i++)
     {
         totalEmpleado += roles[i].aporteEmpleado;    //suma del aporte empleado
         totalEmpleador += roles[i].aporteEmpleador;// suma del aporte Empleador
+        totalAPagar += roles[i].valorAPagar; // suma de sueldo a pagar
     }
-    totalAPagar = (totalEmpleador+totalEmpleado);
-    mostrarTexto("infoTotalPago",totalAPagar);
+    
+    mostrarTexto("infoTotalPago",totalAPagar.toFixed(2));
     mostrarTexto("infoAporteEmpresa",totalEmpleador);
     mostrarTexto("infoAporteEmpleado",totalEmpleado.toFixed(2));
+    totalNomina = totalEmpleador+totalEmpleado+totalAPagar;
+    mostrarTexto("infoTotalNomina",totalNomina.toFixed(2));
 
 }
