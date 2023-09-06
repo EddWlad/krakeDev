@@ -329,3 +329,19 @@ limpiar = function()
     esNuevo = false;
     deshabilitarElementos();
 }
+
+buscarRol = function()
+{
+    let busquedaRol = recuperarTexto("txtBusquedaCedulaRol");
+    let rolEncontrado = buscarEmpleados(busquedaRol);
+    if(rolEncontrado == null)
+    {
+        alert("NO SE ENCONTRO EMPLEADO"); 
+    }
+    else
+    {
+        mostrarTexto("infoCedula",rolEncontrado.cedula);
+        mostrarTexto("infoNombre",rolEncontrado.nombre+" "+rolEncontrado.apellido);
+        mostrarTexto("infoSueldo",rolEncontrado.sueldo);
+    }
+}
