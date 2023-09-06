@@ -287,6 +287,35 @@ validacionSueldo = function(sueldo)
     return estado;
 }
 
+validacionDescuento = function(descuento,sueldo)
+{
+    let estado;
+    if(!isNaN(descuento))
+    {
+
+        if(descuento>=0 && descuento<=sueldo)
+        {
+            
+            estado =true;
+            mostrarTexto("lblErrorDescuentos","");
+            
+        }
+        else
+        {
+            mensaje = "DESCUENTO ERRONEO";
+            mostrarTexto("lblErrorDescuentos",mensaje);
+            estado = false;
+        }
+    }
+    else
+    {
+        mensaje = "ERROR DE VALOR DE DESCUENTO";
+        mostrarTexto("lblErrorDescuentos",mensaje);
+        estado = false;
+    }
+    return estado;
+}
+
 deshabilitarElementos = function()
 {
     deshabilitarComponente("txtCedula");
@@ -336,12 +365,42 @@ buscarRol = function()
     let rolEncontrado = buscarEmpleados(busquedaRol);
     if(rolEncontrado == null)
     {
-        alert("NO SE ENCONTRO EMPLEADO"); 
+        alert("NO SE ENCONTRO EMPLEADO");
+        mostrarTexto("lblErrorBusquedaRol","NO SE ENCONTRO EMPLEADO"); 
     }
     else
     {
         mostrarTexto("infoCedula",rolEncontrado.cedula);
         mostrarTexto("infoNombre",rolEncontrado.nombre+" "+rolEncontrado.apellido);
         mostrarTexto("infoSueldo",rolEncontrado.sueldo);
+        mostrarTexto("lblErrorBusquedaRol",""); 
+    }
+}
+
+calcularAporteEmpleado = function(sueldo)
+{
+    let aporte = sueldo*0.0945;
+    return aporte;
+}
+
+calcularValorAPagar = function(sueldo,aporteIESS,descuento)
+{
+    let pago = sueldo - aporteIESS - descuento;
+    return pago;
+}
+
+calcularRol = function()
+{
+    let sueldo = recuperarFloatDiv("infoSueldo");
+    let descuento = recuperarFloat("txtDescuentos");
+    let aportacion;
+    let pagoTotal;
+    let validacion = validacionDescuento(descuento,sueldo);
+    if(validacion)
+    {
+        aportacion = calcularAporteEmpleado(sueldo);
+        mostrarTexto("infoIESS",aportacion);
+        pagoTotal = calcularValorAPagar(sueldo,aportacion,descuento);
+        mostrarTexto("infoPago",pagoTotal);
     }
 }
