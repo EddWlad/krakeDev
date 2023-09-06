@@ -317,4 +317,15 @@ ejecutarBusqueda = function()
         habilitarComponente("btnGuardar"); 
 
     } 
-}       
+}
+
+limpiar = function()
+{
+    mostrarTextoEnCaja("txtCedula","");
+    mostrarTextoEnCaja("txtNombre","");
+    mostrarTextoEnCaja("txtApellido","");
+    mostrarTextoEnCaja("txtSueldo","");
+    mostrarTextoEnCaja("txtBusquedaCedula","");
+    esNuevo = false;
+    deshabilitarElementos();
+}
